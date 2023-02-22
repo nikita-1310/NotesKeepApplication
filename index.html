@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Keep Application</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./Image/icon.png">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Project Section -->
+    <div id="container">
+        <nav>
+            <h1>Notes Keep Application</h1>
+            <i class="fa fa-gear fa-spin" style="font-size:44px;" id="icon"></i>
+        </nav>
+        
+        <!-- To create a home window  -->
+        <div class="wrapper">
+            <li class="add-box">
+                <div class="icon">
+                    <i class="fa fa-plus"></i>
+                </div>
+                <p>Add New Note</p>
+            </li>    
+        </div>
+
+        <!-- To create a popup window  -->
+        <div class="popup-box">
+            <div class="popup">
+                <div class="content">
+                    <header>
+                        <p>Add a New Note</p>
+                        <i class="fa fa-remove"></i>
+                    </header>
+                    <form action="#">
+                        <div class="row title">
+                            <label >Title</label>
+                            <div class="con-row">
+                                <!-- <input type="text"> -->
+                                <!-- <textarea></textarea> -->
+                                <textarea id="inputText" class="input" ></textarea> 
+                                <i class="fa fa-microphone" onclick="inputVoice()"></i>
+                            </div>
+                        </div>
+    
+                        <div class="row description">
+                            <label >Description</label>
+                            <div class="con-row">
+                                <textarea id="text"></textarea><i class="fa fa-microphone" onclick="voice()"></i>
+                            </div>
+                            <div class="listen" id="listen">
+                                <img src="./Image/sound.gif" alt="Network Issue">
+                                <p id="para">Listening....</p>
+                            </div>
+                        </div>
+    
+                        <button>Add Note</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+        var loader = document.getElementById('preloader');
+        window.addEventListener('load',()=>{
+            loader.style.display = 'none';
+        })        
+    </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@400;500&display=swap');
+*{
+    margin :0;
+    padding : 0;
+    box-sizing : boder-box;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    
+}
+:root{
+    --primary-color:#6582c7;
+    --text-color:#6582c7;
+    --hover-color : navy;
+    --heading-color:darkblue;
+    --theme-color:navy;
+    --scroll-bar :#204091;
+    --note-scroll-bar :#6a93f8;
+}
+
+.dark-theme{
+    --primary-color:#000;
+    --text-color:#434141;
+    --hover-color : #000;
+    --heading-color:white;
+    --theme-color:white;
+    --scroll-bar :#a7a2a2;
+    --note-scroll-bar :#858484;
+}
+body{
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:var(--scroll-bar) ;
+    border-radius: 10px;
+}
+
+
+nav{
+    display: flex;
+}
+nav i{
+    margin: 20px 50px;
+    color: var(--theme-color);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+nav h1{
+    flex-grow: 3;
+    font-size: 36px;
+    text-align: center;
+    color: var(--heading-color);
+    padding-top: 20px;
+    text-shadow: 3px 2px 0.2px rgba(231, 228, 228, 0.5);
+}
+
+.wrapper{
+    gap: 20px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 265px);
+    justify-content: space-around;
+}
+@media screen and (max-width:350px) {
+    .wrapper{
+        grid-template-columns: repeat(auto-fill, 200px);
+       
+    }
+}
+.wrapper li{
+    height: 250px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+}
+.add-box, .icon, .bottom-content,.settings .menu li,.content header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-box{
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.add-box .icon{
+    border: 2px dashed var(--text-color);
+    border-radius: 50%;
+    height: 80px;
+    justify-content: center;
+    width: 80px;
+    font-size: 40px;
+    font-weight: 100;
+    color: var(--text-color);
+}
+.add-box .icon:hover{
+    border: 2px dashed var(--hover-color);
+    color: var(--hover-color);
+}
+
+.add-box p{
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-top: 20px;
+}
+.add-box p:hover{
+    color: var(--hover-color);
+}
+.wrapper .note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.note .details{
+    max-height: 190px;
+    overflow-y: auto;
+}
+.note .details::-webkit-scrollbar{
+    width: 6px;
+}
+.note .details::-webkit-scrollbar-thumb{
+    background: var(--note-scroll-bar) ;
+    border-radius: 6px;
+}
+.note .details::-webkit-scrollbar-thumb:hover{
+    background: var(--hover-color) ;
+}
+.note p{
+    font-size: 22px;
+    font-weight: 500;
+}
+.note span{
+    text-align: justify;
+    display: block;
+    color: #575757;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.note .bottom-content{
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.bottom-content span{
+    color: #6d6d6d;
+    font-size: 14px;
+}
+.bottom-content .settings i{
+    color: #6d6d6d;
+    font-size: 15px;
+    cursor: pointer;
+}
+.settings{
+    position: relative;
+}
+.settings .menu{
+    border-radius: 4px;
+    position: absolute;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    bottom: 0;
+    padding: 5px 0;
+    right: -5px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+}
+.settings.show .menu{
+    transform: scale(1);
+}
+.settings .menu li{
+    height: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0;
+    padding: 10px 15px;
+    justify-content: flex-start;
+}
+.menu li:hover{
+    background-color: #e9e9e9;
+}
+.menu li i{
+    padding-right: 8px;
+}
+.popup-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-box .popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    max-width: 400px;
+    transform: translate(-50%, -50%);
+}
+.popup .content{
+    background-color: #fff;
+    border-radius: 5px;
+}
+.popup .content header{
+    border-bottom: 1px solid #ccc;
+    padding: 15px 25px;
+}
+.content header p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.content header i{
+    color: #8b8989;
+    cursor: pointer;
+    font-size: 23px;
+}
+.content form{
+    margin: 15px 25px 35px;
+}
+.content form .row{
+    margin-bottom: 20px;
+}
+.row .con-row{
+    display:flex;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+.row .con-row i{
+    cursor:pointer;
+    padding:30px 10px 5px 10px;
+}
+.description .con-row i{
+    padding-top:150px;
+}
+form .row label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.content form #inputText, #text{
+    width: 90%;
+    border:none;
+    outline: none;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 17px;
+    resize: none;
+    caret-color: darkcyan;
+    font-weight: 500;
+    color: darkcyan;
+}
+.content form #text{
+    height: 150px;
+    padding: 8px 15px;
+    caret-color: darkslategrey;
+    color: darkslategrey;
+}
+.content form button{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: var(--text-color);
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: white;
+    outline: none;
+    border: none;
+}
+.content form button:hover{
+    background-color: var(--hover-color);
+}
+.popup-box, .popup-box .popup{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+.popup-box.show, .popup-box.show .popup{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+#preloader{
+    background: #fff url(./Image/loader.gif) no-repeat center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100000;
+}
+
+.listen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.listen img{
+    width: 100px;
+    height: 40px;
+}
+.listen p{
+    color: red;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+}
