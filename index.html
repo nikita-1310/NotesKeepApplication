@@ -18,7 +18,18 @@
     <div id="container">
         <nav>
             <h1>Notes Keep Application</h1>
-            <i class="fa fa-gear fa-spin" style="font-size:44px;" id="icon"></i>
+            <div class="icon">
+                <i class="fa fa-circle" style="font-size:30px;" id="icon"></i>
+                <i class="fa fa-gear" style="font-size:30px;" id="icon_color"></i>
+                <ul class="menu" id="menu">
+                    <li style="background-color:#c98404 ;" id="yellow"></li>
+                    <li style="background-color:#a00f40 ;" id="pink"></li>
+                    <li style="background-color:#4b8d08 ;" id="green"></li>
+                    <li style="background-color:#b80505 ;" id="red"></li>
+                    <li style="background-color:#f43c1b ;" id="orange"></li>
+                    <li style="background-color:#990f95 ;" id="violet"></li>
+                </ul>
+            </div>
         </nav>
         
         <!-- To create a home window  -->
@@ -43,8 +54,6 @@
                         <div class="row title">
                             <label >Title</label>
                             <div class="con-row">
-                                <!-- <input type="text"> -->
-                                <!-- <textarea></textarea> -->
                                 <textarea id="inputText" class="input" ></textarea> 
                                 <i class="fa fa-microphone" onclick="inputVoice()"></i>
                             </div>

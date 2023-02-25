@@ -7,12 +7,43 @@ descTag = document.getElementById('text'),
 addBtn = popupBox.querySelector('button')
 ;
 
-// Change theme
+// Color Changer
+document.getElementById('icon_color').addEventListener('click',()=>{
+    document.getElementById('menu').classList.toggle('show');
+})
 
+// Dark theme
 let changeTheme = document.getElementById('icon');
 changeTheme.addEventListener('click',()=>{
-    document.body.classList.toggle("dark-theme")
+    document.body.classList.toggle("dark-theme");
 })
+
+// Yellow theme
+document.getElementById('yellow').addEventListener('click',()=>{
+    document.body.classList.toggle('yellow-theme')
+})
+
+// pink theme
+document.getElementById('pink').addEventListener('click',()=>{
+    document.body.classList.toggle('pink-theme')
+})
+// Green theme
+document.getElementById('green').addEventListener('click',()=>{
+    document.body.classList.toggle('green-theme')
+})
+// Red theme
+document.getElementById('red').addEventListener('click',()=>{
+    document.body.classList.toggle('red-theme')
+})
+// Orange theme
+document.getElementById('orange').addEventListener('click',()=>{
+    document.body.classList.toggle('orange-theme')
+})
+// Violet theme
+document.getElementById('violet').addEventListener('click',()=>{
+    document.body.classList.toggle('violet-theme')
+})
+
 
 // Speech recognition
 let inputResult = document.getElementById('inputText');
