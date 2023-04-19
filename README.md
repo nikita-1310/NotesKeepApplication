@@ -29,7 +29,7 @@
 <li>Creates a new <b>SpeechRecognition </b>object using <b>SpeechRecognition() constructor</b></li>
 <li>Give the <b>interimResults </b>true because if it is false then it will not record voice</li>
 <li>Give the language <b>en-GB</b> means British English language </li>
-<li>Use start() to start a sppech recognition service listening to incoming audio</li>
+<li>Use start() to start a speech recognition service listening to incoming audio</li>
 </ul>
 
 <h1 align="center">UI (User Interface) of Web Application</h1>
